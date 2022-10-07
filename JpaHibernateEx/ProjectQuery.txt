@@ -1,0 +1,18 @@
+1.
+USer Login --->> Create Folder ->>> New Folder record inserted  In Folder table database(Post MEthod)
+                                     Select User Id From USer Info Table (As Mul Key)
+						 Insert INto Folder TAble With Mul KEy USer_ID 
+2.Document Upload  ------->In Already Created Folder  ---->> Upload Documents
+							Insert into  Document Table  Doc Where Folder Id 
+
+
+
+
+1. Folder(display)
+				Select * From Folder_INfo_tbl where user_id=?;
+				
+2.Document (display)
+				Select * From Doc_Info_tbl where Folder_id = ?;
+				
+				
+				

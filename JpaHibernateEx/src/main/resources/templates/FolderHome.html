@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+<meta charset="ISO-8859-1">
+<title>Folder Manager</title>
+</head>
+<body>
+<style>
+body {
+  background-image: url('/images/img6.png');
+}
+</style>
+<div class ="container-fluit text-center">
+   <h1>Folder Manager</h1>
+    <div class="container-fluit text-right">
+    <a href="http://localhost:3000/logout" class="btn btn-link"><h4><u>Logout</u></h4></a>
+    <br />
+</div>
+
+<div class="text-success">
+<center><h3>[[${message1}]]</h3></center>
+
+</div>
+<div class ="row border rounded m-3 p-3" >
+<th:block th:each="fol : ${list}">
+<div class="col">
+<div>
+<img th:src="@{/images/Folder.png}" width="80">
+</div>
+<div>
+
+
+
+<a th:href="@{/{id}(id = ${fol.folder_id})}">[[${fol.folderName}]]</a>
+</div>
+
+
+
+
+
+<form th:action="@{/delete}" method="get" enctype="multipart/form-data" style="margin: 0 auto;">
+<input type="checkbox" name="fol_id" th:value="${fol.folder_id}" required /> 
+
+<p>
+<input type="submit" value="Delete" class="btn btn-primary">
+</p>
+</form>
+</div>
+</th:block>
+</div>
+
+
+
+
+            
+<form th:action="@{/create}" method="post" enctype="multipart/form-data"
+ style="max-width: 600px; margin: 0 auto;">
+<div class ="border rounded m-3">
+<h2> Create Folder :</h2>
+<p>
+<input type="text" name="folName" required />
+</p>
+
+ <p>
+ <input type="submit" value="create" class="btn btn-primary">
+ </p>
+ </div>
+</form>
+</div>
+</body>
+</html>

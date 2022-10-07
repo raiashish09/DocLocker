@@ -1,0 +1,29 @@
+
+<!--/*/
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+<meta charset="ISO-8859-1">
+<title>Document Manager</title>
+</head>
+<body>
+<div class ="container-fluit text-center">
+   <h1>Shared URL </h1>
+<div class ="row border rounded m-3 p-3" >
+<th:block th:each="doc : ${list}">
+<div class="col">
+<div>
+([[${doc.url}]])
+</div>
+
+</div>
+
+<th:block/>
+</div>
+</div>
+</body>
+</html>
+
+

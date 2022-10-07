@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "spring.jpa.hibernate.format_sql",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.format_sql'"
+  },
+  {
+    "name": "spring.jpa.hibernate.hibernate",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.hibernate'"
+  },
+  {
+    "name": "spring.jpa.hibernate.show-sql",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.show-sql'"
+  },
+  {
+    "name": "spring.jpa.hibernate.properties",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.properties'"
+  }
+]}
